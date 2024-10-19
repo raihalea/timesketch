@@ -37,3 +37,10 @@ yara_match_tagger:
   modifiers: ['split']
   save_search: true
   search_name: 'Yara rule matches'
+
+aws_cloudtrail_readonly:
+  query_string: 'data_type:"aws:cloudtrail:entry" AND cloud_trail_event:".*\"readOnly\":true.*"'
+  tags: ['readOnly']
+  emojis: ['MAGNIFYING_GLASS']
+  save_search: true
+  search_name: 'readOnly'
